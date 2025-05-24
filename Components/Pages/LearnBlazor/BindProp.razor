@@ -2,6 +2,20 @@
 
 <h3>BindProp</h3>
 
-@code {
+Name: @product.Name 
+<br />
+IsActive: @product.IsActive
+<br />
+Price: @product.Price
+<br />
+Input Price : <input type="number" @bind = "@product.Price" @bind:event = "oninput"/>
 
+@code {
+    Models.Product product = new()
+        {
+            Id = 1,
+            Name = "Product 1",
+            IsActive = true,
+            Price = 5
+        };
 }
