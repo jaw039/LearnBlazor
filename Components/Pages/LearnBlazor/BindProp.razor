@@ -8,6 +8,7 @@ IsActive: @product.IsActive
 <br />
 Price: @product.Price
 <br />
+This Product is : @(product.IsActive?"Active":"InActive") <br />
 Input Price : <input type="number" @bind = "@product.Price" @bind:event = "oninput"/>
 
 @code {
@@ -16,6 +17,12 @@ Input Price : <input type="number" @bind = "@product.Price" @bind:event = "oninp
             Id = 1,
             Name = "Product 1",
             IsActive = true,
-            Price = 5
+            Price = 5,
+            ProductProperties = new List<Models.Product_Prop>()
+            {
+                new Models.Product_Prop{ Id = 1, Key = "Color", Value = "Red"},
+                new Models.Product_Prop{ Id = 2, Key= "Size", Value = "20oz"},
+                new Models.Product_Prop{ Id = 3, Key = "Flavor", Value = "Rose"},
+            }
         };
 }

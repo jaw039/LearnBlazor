@@ -7,5 +7,7 @@
         public bool IsActive { get; set; }
 
         public int Price { get; set; }
+
+        public List<Product_Prop> ProductProperties { get; set; } = new();
     }
 }
